@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}">
+    {% comment %} "Block" are placeholders, telling Django to replace this block with content from other sources. {% endcomment %}
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

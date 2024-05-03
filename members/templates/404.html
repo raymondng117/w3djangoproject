@@ -1,0 +1,18 @@
+{% comment %} Django will look for a file named 404.html in the templates folder, and display it when there is a 404 error.
+
+If no such file exists, Django shows the "Not Found" that you saw in the example above.
+
+To customize this message, all you have to do is to create a file in the templates folder and name it 404.html, and fill it with whatever you want: {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{% static '404.css' %}">
+<title>Wrong address</title>
+<body>
+
+<h1>Ooops!</h1>
+
+<h2>I cannot find the file you requested!</h2>
+
+</body>
+</html>

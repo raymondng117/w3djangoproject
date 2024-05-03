@@ -1,0 +1,19 @@
+{% extends 'master.html' %}
+{% comment %} Including the master template with the {% extends %} tag, and inserting a title block and a content block: {% endcomment %}
+
+{% comment %} title content {% endcomment %}
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+{% comment %} members content {% endcomment %}
+{% block content %}
+  <div class="mycard">
+    <h1>Members</h1>
+    <ul>
+      {% for x in mymembers %}
+        <li onclick="window.location = 'details/{{ x.id }}'">{{ x.firstname }} {{ x.lastname }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
